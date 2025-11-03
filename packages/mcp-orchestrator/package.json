@@ -1,0 +1,36 @@
+{
+  "name": "@quantum-sovereign/mcp-orchestrator",
+  "version": "1.0.0",
+  "description": "15-Agent Diamond Topology MCP Orchestration Engine with Quantum Enhancement",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "quantum-processing": "node dist/quantum-orchestrator.js",
+    "diamond-topology": "node dist/diamond-topology-manager.js",
+    "agent-health": "node dist/agent-health-monitor.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.9.0",
+    "@microsoft/model-client-protocol": "^1.0.0",
+    "ws": "^8.14.0",
+    "neo4j-driver": "^5.15.0",
+    "redis": "^4.6.0",
+    "bullmq": "^5.1.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "@types/ws": "^8.5.0",
+    "vitest": "^1.0.0"
+  },
+  "keywords": [
+    "mcp-protocol",
+    "diamond-topology",
+    "quantum-orchestration",
+    "15-agent-system",
+    "legal-ai-automation"
+  ]
+}

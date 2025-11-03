@@ -1,0 +1,51 @@
+{
+  "name": "quantum-sovereign-platform",
+  "version": "1.0.0",
+  "description": "Revolutionary 15-Agent Diamond Topology Platform with Quantum-Enhanced Legal AI Intelligence",
+  "private": false,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "services/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "test:e2e": "turbo run test:e2e",
+    "deploy": "turbo run deploy",
+    "legal-automation": "turbo run legal-automation",
+    "quantum-processing": "turbo run quantum-processing",
+    "sovereign-deploy": "./scripts/deploy-sovereign.sh"
+  },
+  "devDependencies": {
+    "turbo": "^1.13.0",
+    "@changesets/cli": "^2.27.0",
+    "prettier": "^3.1.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GlacierEQ/QUANTUM-SOVEREIGN-PLATFORM.git"
+  },
+  "keywords": [
+    "quantum-ai",
+    "legal-automation",
+    "mcp-orchestration",
+    "diamond-topology",
+    "hawaii-family-court",
+    "free-tier-optimized"
+  ],
+  "author": "GlacierEQ <GLACIER.EQUILIBRIUM@GMAIL.COM>",
+  "license": "MIT",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/GlacierEQ"
+  }
+}

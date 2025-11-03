@@ -1,0 +1,49 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**", "build/**"],
+      "cache": true
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "outputs": [],
+      "cache": true
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "outputs": ["coverage/**"],
+      "cache": true
+    },
+    "test:e2e": {
+      "dependsOn": ["build"],
+      "outputs": ["test-results/**", "playwright-report/**"],
+      "cache": false
+    },
+    "deploy": {
+      "dependsOn": ["build", "test"],
+      "outputs": [],
+      "cache": false
+    },
+    "legal-automation": {
+      "dependsOn": ["build"],
+      "outputs": ["legal-outputs/**", "motion-templates/**"],
+      "cache": true
+    },
+    "quantum-processing": {
+      "dependsOn": ["build"],
+      "outputs": ["quantum-results/**", "agent-logs/**"],
+      "cache": true
+    }
+  },
+  "ui": "tui",
+  "experimentalOptimizations": {
+    "skipBuildCache": false,
+    "skipPackageManager": false
+  }
+}
